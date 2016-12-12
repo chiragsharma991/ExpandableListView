@@ -16,6 +16,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
@@ -78,6 +79,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 				getGroupId(groupPosition),
 				getChildId(groupPosition, childPosition));
 		cb.setTag(tag);
+      //  long v=getChildId(groupPosition, childPosition);
+       // Log.e("Tag", "getChildview  long"+v);
+
 		// set checked if groupId/childId in checked items
 	/*	if(button.getTag().equals("GroupSelect"))
 		{
@@ -97,7 +101,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 					mCheckedItems.add(tag);
 				} else {
 					mCheckedItems.remove(tag);
+
 				}
+
+
+
+
+
+
+
 			}
 		});
 
@@ -143,9 +155,37 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 		button.setOnClickListener(new View.OnClickListener() {
 			@Override
+
 			public void onClick(View view) {
-				Log.e("group btn clicked","log");
-			}
+
+
+
+                for (int i = 0; i <_listDataHeader.size() ; i++) {
+
+                    //Integer vv=new Integer(i);
+
+                    //long w=vv.longValue();
+
+                    for (int j = 0; j <=5; j++)
+                    {
+                        Integer integerI=new Integer(i);
+                        Integer integerJ=new Integer(j);
+                        Long intI=integerI.longValue();
+                        Long intJ=integerJ.longValue();
+                        final Pair<Long, Long> tag2 = new Pair<Long, Long>(intI,intJ);
+
+
+                        if(mCheckedItems.contains(tag2))
+                        {
+                            String xx=_listDataChild.get(_listDataHeader.get(i)).get(j);
+                            Toast.makeText(_context, "check is "+""+xx,Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                }
+
+
+            }
 		});
 
 		lblListHeader.setOnClickListener(new View.OnClickListener() {

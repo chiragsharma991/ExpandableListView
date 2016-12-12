@@ -5,13 +5,13 @@
     density="hdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="29751866789568"
+    timestamp="14677938447406"
     token="-4930151526117180432"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="777" />
+        duration="717" />
     <task
         name="instant-run-dex"
         duration="0" />
@@ -22,24 +22,16 @@
         name="verifier"
         duration="1" />
 
-    <artifact
-        location="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-        type="DEX" />
-
     <build
-        timestamp="23606176143853"
+        timestamp="13976579165352"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="24573986360682"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
+        timestamp="14677938447406"
+        verifier="COLD_SWAP_REQUESTED" />
     <build
         timestamp="29751866789568"
         verifier="COLD_SWAP_REQUESTED" >
