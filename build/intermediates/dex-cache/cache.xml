@@ -2,31 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/csuthar/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="E:\AndroidStudio\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-18.0.0_6f2758ab808a92b26d1dda5bed2b56c22aa95a27/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="c1600c9bbe3318bf2dcb1230a744c933a04fead6">
-        <dex dex="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0d58cc0cf3c129ca2f1b83e9f961cce387865392/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="3070b4a82e74464f4172e88dc782126dfa1433d0">
-        <dex dex="/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9010f9790a53d2d2165ae57943f0e0a91122dc7c/classes.dex" />
+        <dex dex="F:\my project\ExpandableListView\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_bd021ac855459a14a60b1360bf5e351fffbbc720.jar" />
     </item>
 
 </items>

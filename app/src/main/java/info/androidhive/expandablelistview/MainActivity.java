@@ -1,8 +1,5 @@
 package info.androidhive.expandablelistview;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,9 +10,11 @@ import android.widget.CheckBox;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
-import android.widget.ExpandableListView.OnGroupCollapseListener;
-import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class MainActivity extends Activity implements Groupclick {
 
@@ -45,23 +44,10 @@ public class MainActivity extends Activity implements Groupclick {
 		// preparing list data
 		prepareListData();
 
-		//Idset();
-	/*	finalChildSelected=new ArrayList<String>();
-		finalGroupSelected=new ArrayList<String>();
-		child_checked=new boolean[top250.size()];
-		group_checked=new boolean[listDataHeader.size()];
-
-		for (int i = 0; i <top250.size() ; i++) {
-			child_checked[i]=false;
-		}
-		for (int i = 0; i <listDataHeader.size() ; i++) {
-			group_checked[i]=false;
-		}*/
-		
-
 		listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
 
-		// setting list adapter
+		// This is for interface calling, you have to pass context whenever you wans to trigger from it ??
+
 		listAdapter.Listner(this);
 
 		expListView.setAdapter(listAdapter);
@@ -75,9 +61,6 @@ public class MainActivity extends Activity implements Groupclick {
 			@Override
 			public boolean onGroupClick(ExpandableListView parent, View v,
 					int groupPosition, long id) {
-				// Toast.makeText(getApplicationContext(),
-				// "Group Clicked " + listDataHeader.get(groupPosition),
-				// Toast.LENGTH_SHORT).show();
 				Log.e("onGroupClick:", "worked");
 
 
@@ -94,28 +77,9 @@ public class MainActivity extends Activity implements Groupclick {
 			}
 		});
 
-		// Listview Group expanded listener
-		expListView.setOnGroupExpandListener(new OnGroupExpandListener() {
 
-			@Override
-			public void onGroupExpand(int groupPosition) {
-				Toast.makeText(getApplicationContext(),
-						listDataHeader.get(groupPosition) + " Expanded",
-						Toast.LENGTH_SHORT).show();
-			}
-		});
 
-		// Listview Group collasped listener
-		expListView.setOnGroupCollapseListener(new OnGroupCollapseListener() {
 
-			@Override
-			public void onGroupCollapse(int groupPosition) {
-				Toast.makeText(getApplicationContext(),
-						listDataHeader.get(groupPosition) + " Collapsed",
-						Toast.LENGTH_SHORT).show();
-
-			}
-		});
 
 		// Listview on child click listener
 		expListView.setOnChildClickListener(new OnChildClickListener() {
@@ -132,53 +96,13 @@ public class MainActivity extends Activity implements Groupclick {
 										listDataHeader.get(groupPosition)).get(
 										childPosition), Toast.LENGTH_SHORT)
 						.show();
-				
-				/*if(child_check_button.isChecked())
-				{
-					child_checked[childPosition]=true;
-					group_checked[groupPosition]=true;
 
-				}else
-				{
-					child_checked[childPosition]=false;
-					group_checked[groupPosition]=false;
-
-
-				}
-				*/
 				return false;
 			}
 		});
 	}
 
-	/*private void Idset() {
-		child_check_button=(CheckBox)findViewById(R.id.child_check);
-		group_check_button=(CheckBox)findViewById(R.id.group_check);
-		
-		
-	}*/
 
-	protected void selectedValues(View view)
-	{
-		for (int i = 0; i <group_checked.length ; i++) {
-
-
-			if (group_checked[i]) {
-				for (int j = 0; j <
-						child_checked.length ; j++)
-				{
-				   if (child_checked[j])
-				   {
-					   finalChildSelected.add(listDataChild.get(listDataHeader.get(i)).get(j));
-				   }
-				}
-
-			}
-		}
-
-		Log.e("tag","final child select"+finalChildSelected.size());
-
-	}
 	
 
 	/*
@@ -230,6 +154,8 @@ public class MainActivity extends Activity implements Groupclick {
 
 	}
 
+
+	//Interface for expand list view and colapse list view
 
 	@Override
 	public void expandGroupEvent(int groupPosition, boolean isExpanded) {

@@ -1,10 +1,5 @@
 package info.androidhive.expandablelistview;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.Log;
@@ -16,7 +11,11 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
@@ -27,6 +26,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	private final Set<Pair<Long, Long>> mCheckedItems = new HashSet<Pair<Long, Long>>();
 	Button button;
 	Groupclick groupclick;
+	boolean groupButtonCheck=true;
 
 
 
@@ -38,12 +38,17 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		Log.e("tag","list data size"+listChildData.get(listDataHeader.get(0)).size());
 
 	}
+
+	// It will take context from main mathod and can be trigger in main activity only.
+
 	public void Listner(Groupclick context)
 	{
 		this.groupclick=context;
 
 
 	}
+
+	//child list view>>>>
 
 	@Override
 	public Object getChild(int groupPosition, int childPosititon) {
@@ -61,6 +66,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 			boolean isLastChild, View convertView, ViewGroup parent) {
 		Log.e("tag","enter in getchildView");
 
+		// get child name-- to add all list as a layoutinflator...
+
 		final String childText = (String) getChild(groupPosition, childPosition);
 
 		if (convertView == null) {
@@ -73,34 +80,29 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 				.findViewById(R.id.lblListItem);
 		CheckBox cb = (CheckBox) convertView.findViewById(R.id.child_check);
 
-		// two tags are different
+		//  child tag store Integar and Long value and store like this {1,2,3}; and new will not call in final method
 
-		final Pair<Long, Long> tag = new Pair<Long, Long>(
+		final Pair<Long, Long> Childtag = new Pair<Long, Long>(
 				getGroupId(groupPosition),
 				getChildId(groupPosition, childPosition));
-		cb.setTag(tag);
-      //  long v=getChildId(groupPosition, childPosition);
-       // Log.e("Tag", "getChildview  long"+v);
+		// every time set tag on child ckeck boxes...
+		cb.setTag(Childtag);
 
-		// set checked if groupId/childId in checked items
-	/*	if(button.getTag().equals("GroupSelect"))
-		{
-			Log.e("tag","enter in group select");
-			mCheckedItems.add(tag);
-		}*/
-			cb.setChecked(mCheckedItems.contains(tag));
+		// check if contion is true then check box has been On like-{125}={127}
+		cb.setChecked(mCheckedItems.contains(Childtag));
 
 		// set OnClickListener to handle checked switches
 		cb.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 				final CheckBox cb = (CheckBox) v;
-				final Pair<Long, Long> tag = (Pair<Long, Long>) v.getTag();
-				//button.setTag("ChildSelect");
+				final Pair<Long, Long> tagFlag = (Pair<Long, Long>) v.getTag();
+
+				//this is check and uncheked method to remove and add flag ...
 				if (cb.isChecked()) {
-					mCheckedItems.add(tag);
+					mCheckedItems.add(tagFlag);
 				} else {
-					mCheckedItems.remove(tag);
+					mCheckedItems.remove(tagFlag);
 
 				}
 
@@ -113,6 +115,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 			}
 		});
 
+		// inflator calling...
 		txtListChild.setText(childText);
 		return convertView;
 	}
@@ -122,6 +125,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return this._listDataChild.get(this._listDataHeader.get(groupPosition))
 				.size();
 	}
+
+
+
+
+	//Strting grouop>>>>>
 
 	@Override
 	public Object getGroup(int groupPosition) {
@@ -158,31 +166,32 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
 			public void onClick(View view) {
 
+				//check all child and unchecheck child
 
-
-                for (int i = 0; i <_listDataHeader.size() ; i++) {
-
-                    //Integer vv=new Integer(i);
-
-                    //long w=vv.longValue();
-
-                    for (int j = 0; j <=5; j++)
+				if(groupButtonCheck){
+				//check value if
+				mCheckedItems.clear();
+                    for (int j = 0; j <getChildrenCount(groupPosition); j++)
                     {
-                        Integer integerI=new Integer(i);
+                        Integer integerI=new Integer(groupPosition);
                         Integer integerJ=new Integer(j);
                         Long intI=integerI.longValue();
                         Long intJ=integerJ.longValue();
-                        final Pair<Long, Long> tag2 = new Pair<Long, Long>(intI,intJ);
-
-
-                        if(mCheckedItems.contains(tag2))
-                        {
-                            String xx=_listDataChild.get(_listDataHeader.get(i)).get(j);
-                            Toast.makeText(_context, "check is "+""+xx,Toast.LENGTH_SHORT).show();
-                        }
+                        final Pair<Long, Long>GroupChecked = new Pair<Long, Long>(intI,intJ);
+						mCheckedItems.add(GroupChecked);
+						notifyDataSetChanged();
+						groupButtonCheck=false;
                     }
 
-                }
+				}
+				else
+				{
+					mCheckedItems.clear();
+					notifyDataSetChanged();
+					groupButtonCheck=true;
+
+
+				}
 
 
             }

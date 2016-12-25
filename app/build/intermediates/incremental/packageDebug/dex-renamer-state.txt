@@ -1,7 +1,4 @@
-#Mon Dec 12 14:48:40 IST 2016
-base.0=/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0d58cc0cf3c129ca2f1b83e9f961cce387865392
-renamed.1=classes2.dex
+#Sun Dec 25 12:25:03 PST 2016
+base.0=F\:\\my project\\ExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.1=/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9010f9790a53d2d2165ae57943f0e0a91122dc7c/classes.dex
-base.1=/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9010f9790a53d2d2165ae57943f0e0a91122dc7c
-file.0=/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_0d58cc0cf3c129ca2f1b83e9f961cce387865392/classes.dex
+file.0=F\:\\my project\\ExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
-        "source": "/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/src/main/res/drawable-mdpi/ic_launcher.png"
+        "merged": "F:\\Users\\csuthar\\Desktop\\assignmentOne\\ExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
+        "source": "F:\\Users\\csuthar\\Desktop\\assignmentOne\\ExpandableListView\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\my project\\ExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
+        "source": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }
 ]

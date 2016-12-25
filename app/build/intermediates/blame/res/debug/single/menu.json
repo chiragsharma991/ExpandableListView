@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/csuthar/Desktop/assignmentOne/ExpandableListView/app/src/main/res/menu/main.xml"
+        "merged": "F:\\Users\\csuthar\\Desktop\\assignmentOne\\ExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "F:\\Users\\csuthar\\Desktop\\assignmentOne\\ExpandableListView\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "F:\\my project\\ExpandableListView\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\menu\\main.xml"
     }
 ]
