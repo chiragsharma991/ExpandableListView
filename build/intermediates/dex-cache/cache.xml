@@ -10,5 +10,14 @@
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
         <dex dex="F:\my project\ExpandableListView\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_bd021ac855459a14a60b1360bf5e351fffbbc720.jar" />
     </item>
+    <item
+        is-multidex="false"
+        jar="F:\my project\ExpandableListView\app\build\intermediates\exploded-aar\me.decimo.widget\wheelview\1.1.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="819b1ca094596a7381a7453a0ac439ea8c01084d">
+        <dex dex="F:\my project\ExpandableListView\app\build\intermediates\pre-dexed\debug\me.decimo.widget-wheelview-1.1.2_e896853ee99dd4911087244ef1259a0ac1ffd5e6.jar" />
+    </item>
 
 </items>

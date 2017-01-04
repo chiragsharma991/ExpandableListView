@@ -6,8 +6,7 @@ package info.androidhive.expandablelistview;
 
 // In this interface you have to pass this to Groupclick in between from to To ....
 
-public interface Groupclick {
-
+public interface Groupclick
+{
     public void expandGroupEvent(int groupPosition, boolean isExpanded);
-
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <me.decimo.app.widget.WheelView
+            android:id="@+id/p1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <me.decimo.app.widget.WheelView
+            android:id="@+id/p2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <me.decimo.app.widget.WheelView
+            android:id="@+id/p3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+        <EditText
+            android:id="@+id/r1"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="#000">
+        </EditText>
+        <EditText
+            android:id="@+id/r2"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="#000">
+        </EditText>
+        <EditText
+            android:id="@+id/r3"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textColor="#000">
+        </EditText>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="#FFF"
+        android:text="Your choice">
+    </TextView>
+</LinearLayout>

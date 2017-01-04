@@ -2,11 +2,14 @@ package info.androidhive.expandablelistview;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends Activity implements Groupclick {
 
@@ -40,6 +44,26 @@ public class MainActivity extends Activity implements Groupclick {
 
 		// get the listview
 		expListView = (ExpandableListView) findViewById(R.id.lvExp);
+		final EditText edit=(EditText)findViewById(R.id.search);
+
+		edit.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+			}
+
+			@Override
+			public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+				String text=edit.getText().toString().toLowerCase(Locale.getDefault());
+				listAdapter.filter(text);
+
+			}
+
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+			}
+		});
 
 		// preparing list data
 		prepareListData();
@@ -49,7 +73,6 @@ public class MainActivity extends Activity implements Groupclick {
 		// This is for interface calling, you have to pass context whenever you wans to trigger from it ??
 
 		listAdapter.Listner(this);
-
 		expListView.setAdapter(listAdapter);
 		
 		
@@ -108,7 +131,8 @@ public class MainActivity extends Activity implements Groupclick {
 	/*
 	 * Preparing the list data
 	 */
-	private void prepareListData() {
+	private void prepareListData()
+	{
 		listDataHeader = new ArrayList<String>();
 		listDataChild = new HashMap<String, List<String>>();
 		

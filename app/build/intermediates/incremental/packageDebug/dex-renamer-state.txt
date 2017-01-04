@@ -1,4 +1,4 @@
-#Sun Dec 25 12:25:03 PST 2016
+#Wed Jan 04 02:42:46 PST 2017
 base.0=F\:\\my project\\ExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=F\:\\my project\\ExpandableListView\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

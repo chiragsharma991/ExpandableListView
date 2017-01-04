@@ -9,34 +9,88 @@ package info.androidhive.expandablelistview;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int delayEndTime=0x7f010005;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int drawablePointer=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int drawableWheel=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isClockwise=0x7f010004;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rotateDegree=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int scalePointer=0x7f010002;
     }
     public static final class dimen {
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int default_pointer=0x7f020000;
+        public static final int default_wheel=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080005;
-        public static final int checkedAll=0x7f080002;
-        public static final int child_check=0x7f080004;
-        public static final int lblListHeader=0x7f080001;
-        public static final int lblListItem=0x7f080003;
-        public static final int lvExp=0x7f080000;
+        public static final int action_settings=0x7f09000d;
+        public static final int checkedAll=0x7f09000a;
+        public static final int child_check=0x7f09000c;
+        public static final int lblListHeader=0x7f090009;
+        public static final int lblListItem=0x7f09000b;
+        public static final int lvExp=0x7f090001;
+        public static final int p1=0x7f090002;
+        public static final int p2=0x7f090003;
+        public static final int p3=0x7f090004;
+        public static final int r1=0x7f090005;
+        public static final int r2=0x7f090006;
+        public static final int r3=0x7f090007;
+        public static final int result=0x7f090008;
+        public static final int search=0x7f090000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int list_group=0x7f030001;
-        public static final int list_item=0x7f030002;
+        public static final int activity_wheel=0x7f030001;
+        public static final int list_group=0x7f030002;
+        public static final int list_item=0x7f030003;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
+    }
+    public static final class raw {
+        public static final int wheel_spin=0x7f040000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060000;
-        public static final int app_name=0x7f060001;
-        public static final int hello_world=0x7f060002;
+        public static final int action_settings=0x7f070000;
+        public static final int app_name=0x7f070001;
+        public static final int hello_world=0x7f070002;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
@@ -47,9 +101,111 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f060001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a WheelView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #WheelView_delayEndTime info.androidhive.expandablelistview:delayEndTime}</code></td><td></td></tr>
+           <tr><td><code>{@link #WheelView_drawablePointer info.androidhive.expandablelistview:drawablePointer}</code></td><td></td></tr>
+           <tr><td><code>{@link #WheelView_drawableWheel info.androidhive.expandablelistview:drawableWheel}</code></td><td></td></tr>
+           <tr><td><code>{@link #WheelView_isClockwise info.androidhive.expandablelistview:isClockwise}</code></td><td></td></tr>
+           <tr><td><code>{@link #WheelView_rotateDegree info.androidhive.expandablelistview:rotateDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #WheelView_scalePointer info.androidhive.expandablelistview:scalePointer}</code></td><td></td></tr>
+           </table>
+           @see #WheelView_delayEndTime
+           @see #WheelView_drawablePointer
+           @see #WheelView_drawableWheel
+           @see #WheelView_isClockwise
+           @see #WheelView_rotateDegree
+           @see #WheelView_scalePointer
+         */
+        public static final int[] WheelView = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.expandablelistview.R.attr#delayEndTime}
+          attribute's value can be found in the {@link #WheelView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.expandablelistview:delayEndTime
+        */
+        public static final int WheelView_delayEndTime = 5;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.expandablelistview.R.attr#drawablePointer}
+          attribute's value can be found in the {@link #WheelView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name info.androidhive.expandablelistview:drawablePointer
+        */
+        public static final int WheelView_drawablePointer = 1;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.expandablelistview.R.attr#drawableWheel}
+          attribute's value can be found in the {@link #WheelView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name info.androidhive.expandablelistview:drawableWheel
+        */
+        public static final int WheelView_drawableWheel = 0;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.expandablelistview.R.attr#isClockwise}
+          attribute's value can be found in the {@link #WheelView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.expandablelistview:isClockwise
+        */
+        public static final int WheelView_isClockwise = 4;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.expandablelistview.R.attr#rotateDegree}
+          attribute's value can be found in the {@link #WheelView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.expandablelistview:rotateDegree
+        */
+        public static final int WheelView_rotateDegree = 3;
+        /**
+          <p>This symbol is the offset where the {@link info.androidhive.expandablelistview.R.attr#scalePointer}
+          attribute's value can be found in the {@link #WheelView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.androidhive.expandablelistview:scalePointer
+        */
+        public static final int WheelView_scalePointer = 2;
+    };
 }

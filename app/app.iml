@@ -87,6 +87,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/me.decimo.widget/wheelview/1.1.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
@@ -109,5 +110,6 @@
     <orderEntry type="jdk" jdkName="Android API 17 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="support-v4-18.0.0" level="project" />
+    <orderEntry type="library" exported="" name="wheelview-1.1.2" level="project" />
   </component>
 </module>

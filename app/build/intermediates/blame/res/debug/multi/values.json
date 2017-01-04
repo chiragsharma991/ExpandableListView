@@ -146,11 +146,11 @@
         "map": [
             {
                 "to": {
-                    "startLine": 2,
+                    "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 55,
+                    "startOffset": 385,
                     "endColumn": 57,
-                    "endOffset": 108
+                    "endOffset": 438
                 },
                 "from": {
                     "file": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\values\\dimens.xml",
@@ -165,11 +165,11 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 113,
+                    "startOffset": 443,
                     "endColumn": 55,
-                    "endOffset": 164
+                    "endOffset": 494
                 },
                 "from": {
                     "file": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\values\\dimens.xml",
@@ -184,11 +184,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 169,
+                    "startOffset": 499,
                     "endColumn": 52,
-                    "endOffset": 217
+                    "endOffset": 547
                 },
                 "from": {
                     "file": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\values\\strings.xml",
@@ -203,11 +203,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 222,
+                    "startOffset": 552,
                     "endColumn": 56,
-                    "endOffset": 274
+                    "endOffset": 604
                 },
                 "from": {
                     "file": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\values\\strings.xml",
@@ -222,11 +222,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 279,
+                    "startOffset": 609,
                     "endColumn": 52,
-                    "endOffset": 327
+                    "endOffset": 657
                 },
                 "from": {
                     "file": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\values\\strings.xml",
@@ -241,12 +241,12 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 332,
-                    "endLine": 13,
+                    "startOffset": 662,
+                    "endLine": 14,
                     "endColumn": 12,
-                    "endOffset": 618
+                    "endOffset": 948
                 },
                 "from": {
                     "file": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\values\\styles.xml",
@@ -262,12 +262,12 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 623,
-                    "endLine": 16,
+                    "startOffset": 953,
+                    "endLine": 17,
                     "endColumn": 12,
-                    "endOffset": 778
+                    "endOffset": 1108
                 },
                 "from": {
                     "file": "F:\\my project\\ExpandableListView\\app\\src\\main\\res\\values\\styles.xml",

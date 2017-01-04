@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="WheelView"><attr format="reference" name="drawableWheel"/><attr format="reference" name="drawablePointer"/><attr format="float" name="scalePointer"/><attr format="integer" name="rotateDegree"/><attr format="boolean" name="isClockwise"/><attr format="integer" name="delayEndTime"/></declare-styleable>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="action_settings">Settings</string>

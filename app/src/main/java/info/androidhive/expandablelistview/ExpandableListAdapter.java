@@ -12,17 +12,22 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
+
+	private  String TAGING="TAGING";
 
 	private Context _context;
 	private List<String> _listDataHeader; // header titles
 	// child data in format of header title, child title
 	private HashMap<String, List<String>> _listDataChild;
+	private HashMap<String, List<String>> dublicate_listDataChild;
 	private final Set<Pair<Long, Long>> mCheckedItems = new HashSet<Pair<Long, Long>>();
 	Button button;
 	Groupclick groupclick;
@@ -35,7 +40,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		this._context = context;
 		this._listDataHeader = listDataHeader;
 		this._listDataChild = listChildData;
-		Log.e("tag","list data size"+listChildData.get(listDataHeader.get(0)).size());
+		this.dublicate_listDataChild =new HashMap<String, List<String>>();
+		this.dublicate_listDataChild.putAll(listChildData);
+
+
+		Log.e(TAGING, "ExpandableListAdapter: "+dublicate_listDataChild.size());
 
 	}
 
@@ -92,26 +101,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		cb.setChecked(mCheckedItems.contains(Childtag));
 
 		// set OnClickListener to handle checked switches
-		cb.setOnClickListener(new View.OnClickListener() {
+		cb.setOnClickListener(new View.OnClickListener()
+		{
 
-			public void onClick(View v) {
+			public void onClick(View v)
+			{
 				final CheckBox cb = (CheckBox) v;
 				final Pair<Long, Long> tagFlag = (Pair<Long, Long>) v.getTag();
 
 				//this is check and uncheked method to remove and add flag ...
-				if (cb.isChecked()) {
+				if (cb.isChecked())
+				{
 					mCheckedItems.add(tagFlag);
-				} else {
+				} else
+				{
 					mCheckedItems.remove(tagFlag);
-
 				}
-
-
-
-
-
-
-
 			}
 		});
 
@@ -222,4 +227,45 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 		return true;
 	}
 
+	public void filter(String text)
+	{
+		List<String>arrayList=new ArrayList<String>();
+
+		String charText = text.toLowerCase(Locale.getDefault());
+		_listDataChild.clear();
+		if (charText.length() == 0) {
+			Log.e(TAGING, "add in list: "+dublicate_listDataChild.size() );
+			_listDataChild.putAll(dublicate_listDataChild);
+		}
+		else
+		{
+			for (int i = 0; i <dublicate_listDataChild.size() ; i++)
+			{
+				for (int j = 0; j <_listDataHeader.size(); j++) {
+
+					for (int k = 0; k <dublicate_listDataChild.get(_listDataHeader.get(j)).size(); k++)
+					{
+						if (dublicate_listDataChild.get(_listDataHeader.get(j)).get(k).toLowerCase(Locale.getDefault()).contains(charText))
+						{
+							arrayList.add(dublicate_listDataChild.get(_listDataHeader.get(j)).get(k));
+
+						}
+
+					}
+					_listDataChild.put(_listDataHeader.get(j),arrayList);
+
+
+				}
+
+
+
+
+
+			}
+			{
+			}
+		}
+		      notifyDataSetChanged();
+
+	}
 }
